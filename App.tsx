@@ -1,15 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-import Navigator from './routes/homeStack.tsx';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Home from './screens/home';
+import Calender from './screens/calender';
+
+import Navigator from './routes/homeStack';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      return {
-        <Navigator />
-      }
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name = "Home" component={ Home } />
+        <Stack.Screen name = "Calender" component={ Calender } />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

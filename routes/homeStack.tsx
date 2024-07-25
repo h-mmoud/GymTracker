@@ -1,17 +1,22 @@
-import { createStackNavigator } from 'react-navigation-stack';
-import { createAppContainer } from 'react-navigation';
-import Home from '../screens/home.tsx';
-import Calender from '../screens/calender.tsx';
+
+import { View, Text } from 'react-native';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import Home from '../screens/home';
+// import Calender from '../screens/calender';
 
 const screens = {
   Home: {
     screen: Home,
   },
-  Calender: {
-    screen: Calender,
-  }
+  //Calender: {
+    //screen: Calender,
+  //}
 }
 
-const HomeStack = createStackNavigator(screens);
+function HomeStack = createNativeStackNavigator({screens}); 
 
-export default createAppContainer(HomeStack);
+export default NavigationContainer(Home);
+
