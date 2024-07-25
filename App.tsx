@@ -5,7 +5,8 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './screens/home';
-import Calender from './screens/calender';
+import Calendar from './screens/calendar';
+import MainContainer from './navigation/MainContainer';
 
 import Navigator from './routes/homeStack';
 
@@ -13,12 +14,7 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name = "Home" component={ Home } />
-        <Stack.Screen name = "Calender" component={ Calender } />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <MainContainer/>
   );
 }
 
