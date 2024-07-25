@@ -1,1 +1,1 @@
-# my gym tracker
+# my gym tracker app
