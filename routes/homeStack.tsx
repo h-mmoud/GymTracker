@@ -13,6 +13,7 @@ const screens = {
   },
 }
 
+
 function HomeStack = createNativeStackNavigator({screens}); 
 
 export default NavigationContainer(Home);
