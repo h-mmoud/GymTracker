@@ -11,9 +11,6 @@ const screens = {
   Home: {
     screen: Home,
   },
-  //Calender: {
-    //screen: Calender,
-  //}
 }
 
 function HomeStack = createNativeStackNavigator({screens}); 
