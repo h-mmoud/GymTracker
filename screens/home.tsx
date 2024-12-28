@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, Image, StyleSheet, Button } from 'react-native';
 import { format } from 'date-fns';
 
 const GetDate = () => {
@@ -15,8 +15,8 @@ const GetDate = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
+    paddingTop: 30,
+    width: '100%',
     alignItems: 'center',
   },
   dateText: {
@@ -27,14 +27,27 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'gray',
   },
+  h2: {
+    padding: 10,
+    fontSize: 18,
+    color: 'gray',
+  },
+  ronnie: {
+    width: 300,
+    height: 500,
+    borderRadius: 100,
+  }
+
 });
 
 export default function Home() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
+    <View style={{ flex: 1, alignItems: 'center' }}>
       <GetDate />
+      <Text style={styles.h2}>Welcome to the Gym Tracker! </Text>
+      <Image source={require('../assets/ronnie-coleman.png')} style={styles.ronnie} />
     </View>
+    
   );
 }
 
